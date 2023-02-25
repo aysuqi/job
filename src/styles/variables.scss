@@ -1,0 +1,13 @@
+$y-dark-grey: var(--y-dark-grey, rgba(0, 0, 0, .7));
+$y-dark-ligth: var(--y-dark-ligth, #646566);
+
+$y-text-inverse: var(--y-text-inverse, #ffffff);
+$y-text-seconday: var(--y-text-seconday, #f5f5f5);
+
+$y-fz-xs: var(--y-fz-xs, 20px);     /* 说明文本，标签文字等关注度低的文字 */
+$y-fz-sm: var(--y-fz-sm, 24px);     /* 页面辅助信息，次级内容等 */
+$y-fz-df: var(--y-fz-df, 28px);     /* 页面默认字号，用于摘要或阅读文本 */
+$y-fz-lg: var(--y-fz-lg, 32px);     /* 页面小标题，首要层级显示内容 */
+$y-fz-xl: var(--y-fz-xl, 36px);     /* 页面大标题，用于结果页等单一信息页 */
+$y-fz-xxl: var(--y-fz-xxl, 44px);   /* 用于金额数字等信息 */
+$y-fz-sl: var(--y-fz-sl, 80px);     /* 用于图标、数字等特大显示 */

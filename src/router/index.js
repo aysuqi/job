@@ -1,26 +1,17 @@
-import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-
-const routes = [
-  {
-    path: "/",
-    name: "home",
-    component: HomeView,
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
-];
+import { createRouter, createWebHistory } from 'vue-router'
+import constantRouterMap from './routers'
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
-});
+  routes: constantRouterMap
+})
 
-export default router;
+router.beforeEach((to, from, next) => {
+  // 设置浏览器窗口标题内容
+  let pathTitle = to.meta.title
+  document.title = to.meta.title ? pathTitle : '简历'
+  // 在这里执行实际业务的逻辑...
+  next()
+})
+
+export default router
