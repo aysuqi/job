@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 const useAppStore = defineStore('APP', {
   state: () => ({
-    checked: false,
+    checked: true,
     theme: 'dark'
   }),
   getters: {},

@@ -7,7 +7,7 @@ const constantRouterMap = [
     redirect: '/home',
     children: [
       {
-        path: '/home',
+        path: '/',
         name: 'Home',
         meta: { title: '首页' },
         component: () => import('@/views/home/HomeView.vue')
@@ -47,6 +47,12 @@ const constantRouterMap = [
         name: 'Hooks',
         meta: { title: 'Hooks+' },
         component: () => import('@/views/hooks/HooksView')
+      },
+      {
+        path: '/:pathMatch(.*)*',
+        name: 'Home',
+        meta: { title: '首页' },
+        component: () => import('@/views/home/HomeView.vue')
       }
     ]
   }

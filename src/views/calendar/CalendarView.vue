@@ -45,7 +45,7 @@ import { reactive, onMounted, computed } from 'vue'
 import useAppStore from '@/store/app'
 
 const store = useAppStore()
-const theme1 = computed(() => (store.checked ? '' : 'ligth-inverse'))
+const theme1 = computed(() => (store.checked ? 'dark-bg' : 'ligth-inverse'))
 const theme2 = computed(() => (store.checked ? 'dark-grey' : 'ligth-seconday'))
 const state = reactive({
   dataCount: [],
@@ -140,6 +140,9 @@ const activeDate = date => {
 }
 .dark-grey {
   background-color: $y-dark-grey;
+}
+.dark-bg {
+  background-color: $y-dark-bg;
 }
 .ligth-inverse {
   background-color: $y-text-inverse;
