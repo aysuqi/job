@@ -3,7 +3,7 @@ const { VantResolver } = require('unplugin-vue-components/resolvers')
 const ComponentsPlugin = require('unplugin-vue-components/webpack')
 
 module.exports = defineConfig({
-  publicPath: process.env.NODE_ENV === 'production' ? '.' : '/',
+  publicPath: './',
   transpileDependencies: true,
   configureWebpack: {
     plugins: [
